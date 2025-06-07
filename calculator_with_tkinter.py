@@ -7,7 +7,7 @@ equation_text = ''
 def button_press(num):
     global equation_text
     equation_text += str(num)
-    calculeLabel.config(text=equation_text, font=('Arial', 25), width=41, height=2, padx=0, pady=0)
+    calculeLabel.config(text=equation_text, padx=0, pady=0)
 
 def equals_press():
     global equation_text
@@ -37,11 +37,12 @@ display_frame.grid(row=0, column=0)
 calculeLabel = Label(display_frame,
                      bd=5,
                      relief=SUNKEN,
-                     width=110,
-                     height=5)
+                     width=35,
+                     height=3,
+                     font=('Arial', 25, 'bold'))
 calculeLabel.grid(row=0, column=0)
 
-backspacebutton = Button(display_frame, text='<', command=backspace)
+backspacebutton = Button(display_frame, text='<', command=backspace, height=8)
 backspacebutton.grid(row=0, column=1)
 
 #########################################
